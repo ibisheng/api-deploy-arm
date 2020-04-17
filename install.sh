@@ -53,7 +53,7 @@ mkdir logs
 cd $basepath
 bash upNodes.sh
 
-bash init.sh 3 latest $1
+bash init.sh 3 arm $1
 bash initAdminPass.sh bisheng
 sleep 10
 bash fontsService.sh
