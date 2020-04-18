@@ -12,8 +12,8 @@ echo "copy resource data"
 basepath=$(cd `dirname $0`; pwd)
 
 rm -rf $1/*
-docker rm nginx minio redis rabbit mongod  editor_app convert editor -f  1 > /dev/null 2>&1
-docker network create bisheng 1 > /dev/null 2>&1
+docker rm nginx minio redis rabbit mongod  editor_app convert editor -f
+docker network create bisheng
 
 export basedir=$1
 export tag=arm
