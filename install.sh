@@ -53,9 +53,12 @@ mkdir logs
 cd $basepath
 bash upNodes.sh
 
+sleep 30
+
+
 bash init.sh 3 arm $1
 bash initAdminPass.sh bisheng
-sleep 10
+sleep 30
 bash fontsService.sh
 bash restart.sh
 bash clearImages.sh
