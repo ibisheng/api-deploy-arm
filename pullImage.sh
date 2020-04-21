@@ -4,7 +4,7 @@ docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/editor_arm:$1
 docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/convert_arm:$1
 docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/tools_arm:$1
 
-docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/mongo:3.6arm
-docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/redis:4.0arm
-docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/rabbitmq:3.6arm
-docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/minio:arm
+docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/mongo_arm:3.6
+docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/redis_arm:4.0
+docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/rabbitmq_arm:3.6
+docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/minio_arm:latest
