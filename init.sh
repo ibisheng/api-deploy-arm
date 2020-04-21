@@ -22,4 +22,4 @@ docker run --name tools --privileged  \
     -e type=$1  \
     -e args=$4  \
     --net=bisheng  \
-    registry.cn-zhangjiakou.aliyuncs.com/bisheng/tools:$2
+    registry.cn-zhangjiakou.aliyuncs.com/bisheng/tools_arm:$2
