@@ -16,10 +16,10 @@ docker rm nginx minio redis rabbit mongod  editor_app convert editor -f
 docker network create bisheng
 
 export basedir=$1
-export tag=arm
+export tag=latest
 sh pullImage.sh $tag
 
-echo "$1 arm" > .config
+echo "$1 $tag" > .config
 
 mkdir $1/service
 mkdir $1/workspace
@@ -56,7 +56,7 @@ bash upNodes.sh
 sleep 30
 
 
-bash init.sh 3 arm $1
+bash init.sh 3 $tag $1
 bash initAdminPass.sh bisheng
 sleep 30
 bash fontsService.sh

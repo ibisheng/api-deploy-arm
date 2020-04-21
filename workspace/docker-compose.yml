@@ -1,7 +1,7 @@
 version: "3.2"
 services:
   editor_app:
-    image: registry.cn-zhangjiakou.aliyuncs.com/bisheng/editor_app:${tag}
+    image: registry.cn-zhangjiakou.aliyuncs.com/bisheng/editor_app_arm:${tag}
     container_name: editor_app
     privileged: true
     volumes:
@@ -14,7 +14,7 @@ services:
         aliases:
         - editor_app
   editor:
-    image: registry.cn-zhangjiakou.aliyuncs.com/bisheng/editor:${tag}
+    image: registry.cn-zhangjiakou.aliyuncs.com/bisheng/editor_arm:${tag}
     container_name: editor
     privileged: true
     volumes:
@@ -29,7 +29,7 @@ services:
         aliases:
         - editor
   convert:
-    image: registry.cn-zhangjiakou.aliyuncs.com/bisheng/convert:${tag}
+    image: registry.cn-zhangjiakou.aliyuncs.com/bisheng/convert_arm:${tag}
     container_name: convert
     privileged: true
     volumes:
