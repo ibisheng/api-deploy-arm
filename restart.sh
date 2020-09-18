@@ -21,7 +21,7 @@ docker-compose restart  mongod redis minio
 sleep 40
 
 cd $data/workspace
-docker-compose restart editor_app editor convert
+docker-compose restart editor_app editor
 
 sleep 20
 
