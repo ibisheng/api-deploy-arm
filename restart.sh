@@ -15,7 +15,7 @@ export tag=$tag
 
 cd $data/service
 
-docker-compose restart  mongod redis rabbit minio
+docker-compose restart  mongod redis minio
 
 
 sleep 40

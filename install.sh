@@ -12,11 +12,11 @@ echo "copy resource data"
 basepath=$(cd `dirname $0`; pwd)
 
 rm -rf $1/*
-docker rm nginx minio redis rabbit mongod  editor_app convert editor -f
+docker rm nginx minio redis  mongod  editor_app convert editor -f
 docker network create bisheng
 
 export basedir=$1
-export tag=latest
+export tag=base_dev
 sh pullImage.sh $tag
 
 echo "$1 $tag" > .config
@@ -36,7 +36,6 @@ cd $1/service
 
 mkdir -p mongod/db mongod/log
 touch  mongod/log/mongod.log
-mkdir -p rabbitmq/data
 mkdir -p minio/config minio/data
 mkdir -p nginx/temp nginx/keys
 touch  nginx/temp/error.log
