@@ -16,7 +16,7 @@ docker rm nginx minio redis  mongod  editor_app editor -f
 docker network create bisheng
 
 export basedir=$1
-export tag=dev_base
+export tag=v3
 sh pullImage.sh $tag
 
 echo "$1 $tag" > .config
