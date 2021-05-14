@@ -7,6 +7,8 @@ services:
     volumes:
     - ${basedir}/workspace:/workspace
     restart: on-failure:10
+    environment:
+      NODEID: editor_app_worker
 #    ports:
 #    - 5500:5500
     networks:
@@ -22,6 +24,8 @@ services:
     restart: on-failure:10
     environment:
       ADDR: editor
+      NODEID: editor_worker
+
 #    ports:
 #    - 18000:18000
     networks:
