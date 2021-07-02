@@ -25,6 +25,12 @@ services:
     environment:
       ADDR: editor
       NODEID: editor_worker
+   #ports:
+   #  - 18000:18000
+    networks:
+      bisheng:
+        aliases:
+        - editor  
   convert:
     image: registry.cn-zhangjiakou.aliyuncs.com/bisheng/convert_arm:${tag}
     container_name: convert
