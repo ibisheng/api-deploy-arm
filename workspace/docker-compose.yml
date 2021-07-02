@@ -39,12 +39,6 @@ services:
       bisheng:
         aliases:
         - convert
-#    ports:
-#    - 18000:18000
-    networks:
-      bisheng:
-        aliases:
-        - editor
 networks:
   bisheng:
     external: true
