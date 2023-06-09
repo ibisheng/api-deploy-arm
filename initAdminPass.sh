@@ -17,7 +17,6 @@ tag=${arr[1]}
 
 docker rm tools -f 1 > /dev/null 2>&1
 
-docker pull registry.cn-zhangjiakou.aliyuncs.com/bisheng/tools_arm:$tag
 
 docker run --name tools --privileged  \
     -v $data:/workspace \
@@ -25,4 +24,5 @@ docker run --name tools --privileged  \
     -e type=32  \
     -e pass=$1  \
     --net=bisheng  \
-    registry.cn-zhangjiakou.aliyuncs.com/bisheng/tools_arm:$tag
+    --entrypoint  /bisheng/bin/tools \
+    registry.cn-zhangjiakou.aliyuncs.com/bisheng/editor_app_arm:$tag

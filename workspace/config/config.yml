@@ -1,8 +1,8 @@
 minio:
   endpoint: minio:9000   # minio的主机名或IP,根据自己的情况修改
-#  publicendpoint: oss-cn-beijing.aliyuncs.com #针对实际部署时s3内外网的区别，
-  ak: 9QPAQ65R1SO1NDHNYESN  # minio 的ak ,根据自己的情况修改
-  sk: X9MquX/OTU35GLApKJ8tEMqBcTcXc4WSKigkroUI  # minio的sk,根据自己的情况修改
+  #  publicendpoint: oss-cn-beijing.aliyuncs.com #针对实际部署时s3内外网的区别，
+  ak: admin  # minio 的ak ,根据自己的情况修改
+  sk: password  # minio的sk,根据自己的情况修改
   secure: false
   uploadbucket: upload
   draftbucket: draft
@@ -10,15 +10,17 @@ minio:
   #dnslookup: true
   #region: oss-cn-beijing
 statichost:  /s3 # minio的资源访问地址，根据自己情况修改
-mongodb:
-  url: mongod  # mongodb的主机名或IP,根据自己的情况修改
+dbtype: mysql
+mysql:
+  hosts: # mysql的主机名或IP,根据自己的情况修改
+    - mysql:3306
+  username: root
+  password: "123456"
   db: docs
-  #username: xiedan
-  #password: 123456
 redis:
   url: redis:6379   # minio的主机名或IP,根据自己的情况修改,端口一般是默认值
   db: 0
-  #password: 123456
+  #password: 123456  # redis 密码
 editorurl: /apps/editor
-conversionworker: http://convert:5000
+apiurl: http://drive_full:3000/apps/api
 openlog: true #是否开启日志。默认开启全部日志，将此处修改为false，将仅仅打印错误日志
