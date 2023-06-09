@@ -15,13 +15,12 @@ export tag=$tag
 
 cd $data/service
 
-docker-compose restart  mysql redis minio
-
+docker-compose restart
 
 sleep 40
 
 cd $data/workspace
-docker-compose restart editor_app editor
+docker-compose restart
 
 sleep 20
 
