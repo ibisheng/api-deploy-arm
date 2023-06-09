@@ -19,7 +19,7 @@ docker rm tools -f 1 > /dev/null 2>&1
 
 
 docker run --name tools --privileged  \
-    -v $data:/workspace \
+    -v $data/workspace:/workspace \
     -e RUN_ENV=docker \
     -e type=32  \
     -e pass=$1  \
